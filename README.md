@@ -49,7 +49,7 @@ The JSON for the config looks like this:
   You are going to want to make sure there is a comma after every element in the array, or string, etc, -except- when it is the last one in it's scope. If you do the logs will make this very clear.
 
 ##### Images:
-The cape image files are 22x17, and should be of the PNG format. Additionally, Developer Capes supports high definition capes. Those must be of the size that is divisible by 16. The height must be half of the width. So 1024x512, 2048x1024, and so on. Host them on a server, Dropbox, or GitHub. 
+The cape image files are 64x32, and should be of the PNG format. Additionally, Developer Capes supports high definition capes. Those must be of the size that is divisible by 16. The height must be half of the width. So 1024x512, 2048x1024, and so on. Host them on a server, Dropbox, or GitHub. 
 
 ### Building and Packaging your Mod:
 When you build and package your mod, you're going to want to make sure you build with the Developer Capes classes.
