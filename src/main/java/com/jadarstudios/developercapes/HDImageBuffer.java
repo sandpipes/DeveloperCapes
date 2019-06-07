@@ -6,9 +6,10 @@
  */
 package com.jadarstudios.developercapes;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.client.renderer.IImageBuffer;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -36,6 +37,6 @@ public class HDImageBuffer implements IImageBuffer {
         return capeImage;
     }
 
-    @Override
-    public void func_152634_a() {}
+	@Override
+	public void skinAvailable() {}
 }

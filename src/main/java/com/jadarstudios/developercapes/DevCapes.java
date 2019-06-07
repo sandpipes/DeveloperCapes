@@ -8,6 +8,10 @@ package com.jadarstudios.developercapes;
 
 import com.jadarstudios.developercapes.cape.CapeConfig;
 import com.jadarstudios.developercapes.cape.CapeConfigManager;
+import com.jadarstudios.developercapes.cape.CapeLayer;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,7 +32,9 @@ public class DevCapes {
     public static final Logger logger = LogManager.getLogger("DevCapes");
 
     protected DevCapes() {
-        MinecraftForge.EVENT_BUS.register(new RenderEventHandler());
+    	for (RenderPlayer playerRender : Minecraft.getMinecraft().getRenderManager().getSkinMap().values()) {
+			playerRender.addLayer(new CapeLayer(playerRender));
+		}
     }
 
     public static DevCapes getInstance() {
