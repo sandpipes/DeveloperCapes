@@ -64,14 +64,14 @@ The JSON for the config looks like this:
 ##### Images:
 The cape image files are 22x17, and should be of the PNG format. Additionally, Developer Capes supports high definition capes. Those must be of the size that is divisible by 16. The height must be half of the width. So 1024x512, 2048x1024, and so on. Host them on a server, Dropbox, or GitHub. 
 
-<a name="building">
+<a name="building"/>
 ### Building and Packaging your Mod:
 When you build and package your mod, you're going to want to make sure you build with the Developer Capes classes.
 
 Thats it! If you have any trouble, make a post in the Minecraft Forums post or make an issue here on GitHub.
 
-<a name="faq">
-### FAQ:
+<a name="faq"/>
+### FAQ
 #### 1. I'm getting a NullPointerException when starting a dedicated server:
 You're calling a @SideOnly(Side.CLIENT) class on a server. STOP IT. Put it in a ClientProxy.
 
