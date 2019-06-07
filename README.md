@@ -9,31 +9,18 @@ A Minecraft library for adding Developer/Tester only capes!
 Use this to add tester or developer only capes to your mod!
 Developer Capes reads a text file off a web server, public Dropbox folder, or a raw GitHub file. As long as it is not a download site, (such as MediaFire,) it should work.
 
-### Table of Contents  
-[Links](#links)  
-[Getting Started](#gettingStarted)  
-[Guide: Set up with Source Code](#guideSourceCode)  
-[Usage](#usage)  
-[Building](#building)  
-[FAQ](#faq)  
-
-<a name="links"/>
 ### Links:
 [Minecraft Forum Post](http://www.minecraftforum.net/topic/1725536-151apilibraryforge-developer-capes-api-now-with-hd-cape-support/)  
 
-<a name="gettingStarted"/>
 ### Getting Started:
 To start using Developer Capes, [setup your development enviroment](#guideSetUp). See [usage](#usage) to find out how to implement the library in your mod. 
 
-<a name="guideSetUp"/>
 ### Setting Up the Development Environment:
 1. Download source code as a zip by clicking "Download Zip" on the right.  
 2. Unzip to a tempory directory. You can delete this once the source is copied.  
 3. Copy everything in src/main/java/ to the root of your mod source code.
 
-<a name="usage"/>
 ### Usage:
-
 Once Developer Capes is in your classpath somehow, you are going to want to add this to your mod when it initialized. It registers a cape config with DeveloperCapes. 
 
 *Note: The note that was previously here, that said DevCapes didn't have to go in a client proxy, has been redacted. You need to put config registration in the client proxy again*
@@ -64,13 +51,11 @@ The JSON for the config looks like this:
 ##### Images:
 The cape image files are 22x17, and should be of the PNG format. Additionally, Developer Capes supports high definition capes. Those must be of the size that is divisible by 16. The height must be half of the width. So 1024x512, 2048x1024, and so on. Host them on a server, Dropbox, or GitHub. 
 
-<a name="building"/>
 ### Building and Packaging your Mod:
 When you build and package your mod, you're going to want to make sure you build with the Developer Capes classes.
 
 Thats it! If you have any trouble, make a post in the Minecraft Forums post or make an issue here on GitHub.
 
-<a name="faq"/>
 ### FAQ
 #### 1. I'm getting a NullPointerException when starting a dedicated server:
 You're calling a @SideOnly(Side.CLIENT) class on a server. STOP IT. Put it in a ClientProxy.
